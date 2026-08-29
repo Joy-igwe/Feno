@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Security Headers -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data: https:; font-src 'self'; form-action 'self'; connect-src 'self' https://ruuzjvonjfmamevmgsok.supabase.co https://formspree.io; frame-src 'self';">
+  <title>Contact Us - E.Feno International Limited</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="ourproducts.html">Our Products</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="index.html" class="active">Home</a>
+    </nav>
+  </header>
+
+  <section class="contact-info">
+    <h2>Our Shop Address</h2>
+    <p> Shop B14/54, Trade-fair, First gate, Lagos state, Nigeria.</p>
+    <p> Phone: 07063375392 </p>
+    <p> WhatsApp Available at: +2348034289090</p>
+    <p> Email:igwekate08@gmail.com </p>
+  </section>
+
+  <section class="contact-form">
+    <h2>Send Us a Message</h2>
+    <form id="contactForm" action="https://formspree.io/f/xaewkdwg" method="post" novalidate>
+      <!-- CSRF Token Protection -->
+      <input type="hidden" id="csrf_token" name="csrf_token" value="">
+      
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" maxlength="100" required pattern="[a-zA-Z\s]{2,}" placeholder="Enter your full name"><br>
+      <small id="nameError" class="error"></small><br><br>
+
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" maxlength="100" required placeholder="your@email.com"><br>
+      <small id="emailError" class="error"></small><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" maxlength="10000" required placeholder="Your message here (max 10000 characters)"></textarea><br>
+      <small id="messageError" class="error"></small><br><br>
+      
+      <!-- reCAPTCHA would go here in production -->
+      <!-- <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div><br> -->
+      
+      <button type="submit" id="submitBtn">Send Message</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 E.Feno International Limited. All rights reserved.</p>
+    <p>Call : 07063375392 | <a href="https://wa.me/2348034289090" target="_blank" class="whatsapp-btn">Chat on WhatsApp</a></p>
+  </footer>
+ <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+
+</body>
+</html>

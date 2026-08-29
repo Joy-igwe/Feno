@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Our Products | E.Feno International Limited</title>
+</head>
+
+<body>
+    <header>
+        <h1>E.Feno International Limited</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="ourproducts.html" class="active">Our Products</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </header>
+
+    <h2>Our Products</h2>
+    <p>Browse our full catalog of car parts below.</p>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search car parts...">
+    </div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn" data-category="all">All</button>
+    </div>
+
+
+    <section class="catalog" id="catalog">
+    </section>
+
+    <footer>
+        <p>&copy; 2026 E.Feno International Limited. All rights reserved.</p>
+        <p>Call : 07063375392 | <a href="https://wa.me/2348034289090" target="_blank" class="whatsapp-btn">Chat on WhatsApp</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
