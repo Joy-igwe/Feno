@@ -298,8 +298,6 @@ function isLikelySpam(data) {
 app.use((err, req, res, next) => {
   if (err.code === 'EBADCSRFTOKEN') {
     res.status(403).json({ error: 'Invalid CSRF token' });
-  } else if (err instanceof express.multer.MulterError) {
-    res.status(400).json({ error: 'File upload error' });
   } else {
     res.status(500).json({ error: 'Internal server error' });
   }

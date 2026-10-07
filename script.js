@@ -77,6 +77,11 @@ function renderCarparts(parts) {
       <p>${escapeHtml(part.description || 'No description available')}</p>
       
     `;
+    const image = card.querySelector('img');
+    image.addEventListener('error', () => {
+      card.classList.add('image-unavailable');
+      image.remove();
+    }, { once: true });
     catalog.appendChild(card);
   });
 }

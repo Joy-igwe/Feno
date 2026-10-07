@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Learn about E.Feno International Limited, a trusted car-parts sourcing partner in Lagos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>About Us | E.Feno International Limited</title>
 </head>
 
 <body>
-    <header>
-        <h1>E.Feno International Limited</h1>
-
-        <nav>
+    <header class="site-header">
+        <div class="announcement">BRAKE &amp; CLUTCH SPECIALISTS <span>TRADE FAIR, LAGOS</span></div>
+        <div class="header-inner">
+            <a class="brand-logo" href="index.html" aria-label="E.Feno International Limited home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-copy"><strong>E.FENO</strong><small>INTERNATIONAL LIMITED</small></span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Us</a>
             <a href="ourproducts.html">Our Products</a>
-            <a href="aboutus.html">About Us</a>
-        </nav>
+            <a href="aboutus.html" class="active" aria-current="page">About Us</a>
+            <a href="contact.html" class="nav-contact">Contact Us</a>
+            </nav>
+        </div>
     </header>
 
     <section class="about-section">
@@ -40,11 +47,12 @@
         <a href="contact.html" class="cta-button">Get in Touch</a>
     </section>
 
-    <footer>
+    <footer class="site-footer">
+        <a class="footer-brand" href="index.html">E.FENO <span>INTERNATIONAL LIMITED</span></a>
         <p>&copy; 2026 E.Feno International Limited. All rights reserved.</p>
-       <p>Call : 07063375392 | <a href="https://wa.me/2348034289090" target="_blank" class="whatsapp-btn">Chat on WhatsApp</a></p>
+        <p><a href="tel:+2347063375392">0706 337 5392</a><span class="footer-divider">|</span><a href="https://wa.me/2348034289090" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
     </footer>
-     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
 </body>
 </html>

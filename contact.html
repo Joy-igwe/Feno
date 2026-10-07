@@ -4,21 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Security Headers -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="referrer" content="strict-origin-when-cross-origin">
- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data: https:; font-src 'self'; form-action 'self'; connect-src 'self' https://ruuzjvonjfmamevmgsok.supabase.co https://formspree.io; frame-src 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; form-action 'self' https://formspree.io; connect-src 'self' https://ruuzjvonjfmamevmgsok.supabase.co https://formspree.io; frame-src 'self';">
   <title>Contact Us - E.Feno International Limited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
  
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="ourproducts.html">Our Products</a>
-      <a href="aboutus.html">About Us</a>
-      <a href="index.html" class="active">Home</a>
-    </nav>
+  <header class="site-header">
+    <div class="announcement">BRAKE &amp; CLUTCH SPECIALISTS <span>TRADE FAIR, LAGOS</span></div>
+    <div class="header-inner">
+      <a class="brand-logo" href="index.html" aria-label="E.Feno International Limited home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy"><strong>E.FENO</strong><small>INTERNATIONAL LIMITED</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="ourproducts.html">Our Products</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html" class="nav-contact active" aria-current="page">Contact Us</a>
+      </nav>
+    </div>
   </header>
 
   <section class="contact-info">
@@ -55,9 +64,10 @@
     </form>
   </section>
 
-  <footer>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">E.FENO <span>INTERNATIONAL LIMITED</span></a>
     <p>&copy; 2026 E.Feno International Limited. All rights reserved.</p>
-    <p>Call : 07063375392 | <a href="https://wa.me/2348034289090" target="_blank" class="whatsapp-btn">Chat on WhatsApp</a></p>
+    <p><a href="tel:+2347063375392">0706 337 5392</a><span class="footer-divider">|</span><a href="https://wa.me/2348034289090" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
   </footer>
  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="script.js" defer></script>
