@@ -1,21 +1,33 @@
 
  const SUPABASE_URL = "https://ruuzjvonjfmamevmgsok.supabase.co"; // from Settings > General
 const SUPABASE_KEY = "sb_publishable_UMuFCkemafWzwxf9ZyHkXQ_Foi6eypV"; // from Settings > API Keys
-const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const sb = window.supabase?.createClient
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
+  : null;
 
 async function loadCarparts() {
-  const { data, error } = await sb
-    .from('carparts')
-    .select('*')
+  const catalog = document.getElementById('catalog');
+  if (!catalog) return;
 
-  console.log('carparts:', data)
-  if (error) {
-    console.error('error:', error)
+  if (!sb) {
+    catalog.textContent = 'The product catalog is temporarily unavailable.';
+    console.error('Supabase client is unavailable.');
     return
   }
 
-  renderCarparts(data)
-  renderFilters(data)
+  try {
+    const { data, error } = await sb
+      .from('carparts')
+      .select('*');
+
+    if (error) throw error;
+
+    renderCarparts(data || []);
+    renderFilters(data || []);
+  } catch (error) {
+    console.error('Unable to load car parts:', error);
+    catalog.textContent = 'Unable to load products. Please try again later.';
+  }
 }
 
 function renderFilters(parts) {
